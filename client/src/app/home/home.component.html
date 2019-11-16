@@ -1,5 +1,5 @@
-<div layout-gt-sm="row" class="home">
-  <div flex-gt-sm="80" flex-offset-gt-sm="10"  id="mainBody" style="margin-bottom: 70px">
+<!--<div layout-gt-sm="row" class="home">-->
+<!--  <div flex-gt-sm="80" flex-offset-gt-sm="10"  id="mainBody" style="margin-bottom: 70px">-->
 
 <!--    <button id="signIn" class="g-signin2" data-onsuccess="onSignIn" *ngIf="!auth.isSignedIn()" (click)="auth.signIn()"></button>-->
 <!--    <button mat-raised-button id="signOut" *ngIf="auth.isSignedIn()" (click)="auth.signOut()">Sign out</button>-->
@@ -17,12 +17,14 @@
 
 
     <div class="list-of-machines" *ngFor="let machine of machines">
-      <mat-card>
+      <mat-card style="text-align-last: center; height: 100px; width: 200px;">
         <mat-card-subtitle>
           {{machine.name}}
           <mat-card-content>
-            This is a {{machine.type}}.
-            The machine is Running: {{machine.running}}.
+            <p>
+              This is a {{machine.type}}.
+              The machine is Running: {{machine.running}}.
+            </p>
           </mat-card-content>
         </mat-card-subtitle>
       </mat-card>
